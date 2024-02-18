@@ -53,27 +53,71 @@ var mixedArray = ["mango", 1, true];
 // g
 
 var edu_Qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "BBA", "MS", "M. Phil.", "PhD"];
+// Question NO 5
 
-// Question 5:
 
-function sortScores(scores) {
-    scores.sort((a, b) => a - b);
-    return scores;
+ var score1 = prompt("Entre score 1.");
+ var score2 = prompt("Entre score 2.");
+ var score3 = prompt("Entre score 3.");
+
+ var studentScore = [];
+ var scoredPushed = studentScore.push(score1, score2, score3);
+var scoreSorted = studentScore.sort();
+
+alert(studentScore);
+
+// Question No 6
+
+
+ var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+ document.write("<select>");
+ for (var i = 0; i < phoneManufacturers.length; i++) {
+     document.write("<option>" + phoneManufacturers[i] + "</option>");
+
+ }
+ 
+// Question No 7
+
+ var userTable = prompt("Enter Table Number.");
+ var tableLength = prompt("Enter Table Length.", 10);
+
+ for(var i= 1; i <= tableLength; i++)
+
+
+ {
+
+     document.write(userTable + " x " + i + " = " + (userTable*i) + "<br>")
+
+ }
+// Question No 10
+
+
+ var userText = prompt("Enter a word in capital latters")
+ var lowerText = userText.toLowerCase()
+
+ alert(userText + " = " + lowerText)
+
+
+ // Question NO 11
+
+
+ var userText = prompt("Enter a word in small letters.");
+ var upperText = userText.toUpperCase();
+
+ alert(userText + " = " + upperText);
+
+
+// Question NO 12
+
+ var usreNum = prompt("Enter a number.");
+
+ var userType;
+ if (usreNum % 1 == 0) {
+    userType = Number(usreNum);
+
+ }
+ else {
+    userType = usreNum
 }
 
-// Function to handle the main program logic
-function main() {
-    // Initialize the scores array
-    let scores = [85, 90, 78, 92, 88];
-
-    // Display the original scores
-    console.log("Original Scores:");
-    displayScores(scores);
-
-    // Sort the scores
-    let sortedScores = sortScores(scores);
-
-    // Display the sorted scores
-    console.log("\nSorted Scores:");
-    displayScores(sortedScores);
-}
+alert("The Type Of " + usreNum+ " is: " + typeof userType);
